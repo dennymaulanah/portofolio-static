@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Azeria - Project Detail</title>
+<link rel="icon" href="logo.png" type="image/png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "primary": "#004ac6",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-dim": "#d2d9f4",
+                        "inverse-on-surface": "#eef0ff",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf8ff",
+                        "inverse-surface": "#283044",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-container-low": "#f2f3ff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e0e3e5",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-variant": "#dae2fd",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-background": "#131b2e",
+                        "primary-fixed": "#dbe1ff",
+                        "error": "#ba1a1a",
+                        "background": "#faf8ff",
+                        "tertiary-container": "#6b6e70",
+                        "on-surface": "#131b2e",
+                        "surface-container-high": "#e2e7ff",
+                        "outline": "#737686",
+                        "surface-tint": "#0053db",
+                        "on-primary-container": "#eeefff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "tertiary": "#525657",
+                        "on-surface-variant": "#434655",
+                        "surface-container": "#eaedff",
+                        "surface-container-highest": "#dae2fd",
+                        "on-primary-fixed": "#00174b",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary-container": "#2563eb",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#eff1f3",
+                        "secondary": "#505f76",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface": "#faf8ff",
+                        "on-secondary-container": "#54647a",
+                        "outline-variant": "#c3c6d7",
+                        "secondary-container": "#d0e1fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-xl": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "label-mono": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .ambient-depth {
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+            transition: all 0.3s ease;
+        }
+        .ambient-depth:hover {
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-3 text-headline-lg font-headline-lg text-primary dark:text-primary-fixed tracking-tight">
+                <img src="logo.png" alt="Azeria Logo" class="w-10 h-10 object-contain" />
+                Azeria
+            </div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="index.html#home">Home</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 cursor-pointer active:scale-95 transition-transform hover:text-primary dark:hover:text-primary-fixed duration-200" href="index.html#projects">Projects</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="index.html#skills">Skills</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="index.html#contact">Contact</a>
+</nav>
+<button class="hidden md:inline-flex bg-primary-container text-on-primary font-body-md text-body-md px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                Resume
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+    <section class="w-full pt-section-gap pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto min-h-[80vh]">
+        <a href="index.html#projects" class="text-primary font-body-md inline-flex items-center gap-2 mb-8 hover:underline">
+            <span class="material-symbols-outlined">arrow_back</span> Back to Projects
+        </a>
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-depth border border-outline-variant/20">
+            <div class="h-[400px] overflow-hidden relative">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVEQ793t08UhPW8mo3P2FRQQyfgWjmdoeUj0CP74xU9cAqcADAfa0U58diaPWaI8G-e2Srbgfx9e4klOoUEqbOutj7yC3PxljWquVMiPQoiC5m88qoCxmHarwxCFwHIBrgBOzNjIvMrWQWSoQYbYXOSxz0tLCKIlGF13nKXkrzOQP8WRwuFLEX57AB-51lE2mjCYY4aTR1GK67cP8KQZDcg8MUJaT0PSm107Of8OhYoOMrrFl7oQgn"/>
+            </div>
+            <div class="p-8 md:p-12">
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-surface-container-low text-primary font-label-mono text-label-mono px-3 py-1.5 rounded">React</span>
+                    <span class="bg-surface-container-low text-primary font-label-mono text-label-mono px-3 py-1.5 rounded">Node.js</span>
+                    <span class="bg-surface-container-low text-primary font-label-mono text-label-mono px-3 py-1.5 rounded">PostgreSQL</span>
+                </div>
+                <h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">E-commerce Engine</h1>
+                <div class="prose max-w-none text-on-surface-variant text-body-md space-y-4">
+                    <p>A high-performance, scalable backend engine for processing high-volume transactions with real-time inventory synchronization.</p>
+                    <h3 class="font-bold text-lg text-on-surface mt-8 mb-4">Project Overview</h3>
+                    <p>This project was developed to handle thousands of concurrent users during peak shopping seasons. The architecture utilizes microservices to ensure that different parts of the application can scale independently based on demand.</p>
+                    
+                    <h3 class="font-bold text-lg text-on-surface mt-8 mb-4">Key Features</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Real-time inventory synchronization across multiple warehouses.</li>
+                        <li>High-throughput transaction processing with distributed caching.</li>
+                        <li>Comprehensive analytics dashboard for monitoring sales and system health.</li>
+                        <li>Seamless integration with third-party payment gateways.</li>
+                    </ul>
+                </div>
+                <div class="mt-12 flex gap-4">
+                    <button class="bg-primary-container text-on-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-body-md flex items-center gap-2">
+                        View Live Demo <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </button>
+                    <button class="bg-transparent border border-outline text-primary px-6 py-3 rounded-lg hover:bg-surface-container-low transition-colors font-body-md flex items-center gap-2">
+                        Source Code <span class="material-symbols-outlined text-sm">code</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-stack-md">
+<div class="text-body-md font-bold text-on-surface">
+                Azeria
+            </div>
+<div class="font-caption text-caption text-primary dark:text-primary-fixed-dim">
+                © <span id="current-year"></span> Azeria. Built with precision.
+                 <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+            </div>
+<div class="flex gap-4">
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 font-caption text-caption" href="#">GitHub</a>
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 font-caption text-caption" href="#">LinkedIn</a>
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 font-caption text-caption" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
