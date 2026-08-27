@@ -26,10 +26,10 @@ A responsive and modern developer portfolio website, built using HTML5 and Tailw
 
 ## 💻 How to Run
 
-1. Ensure all files (`index.html`, `project-detail.html`, and `logo.png`) are in the same folder (e.g., `c:\xampp\htdocs\azeria`).
+1. Ensure all files (`index.html`, `project-detail.html`, and `logo.png`) are in the same folder (e.g., `c:\xampp\htdocs\portfolio`).
 2. You can simply double-click `index.html` to open it in your browser.
-3. Alternatively, since it's in your XAMPP `htdocs` folder, you can start Apache in the XAMPP Control Panel, then open your browser and navigate to: `http://localhost/azeria/`.
+3. Alternatively, since it's in your XAMPP `htdocs` folder, you can start Apache in the XAMPP Control Panel, then open your browser and navigate to: `http://localhost/portfolio/`.
 
 ---
-*© <span id="year"></span> Azeria. Built with precision.*
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+_© 2026 Azeria. Built with precision._
