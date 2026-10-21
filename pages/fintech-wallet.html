@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Azeria - FinTech Wallet API (Core Banking & Payment Engine)</title>
+    <meta name="description" content="Technical project breakdown of FinTech Wallet API: High-performance, secure digital wallet and payment gateway backend."/>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo.png" type="image/png"/>
+    
+    <!-- Tailwind CSS CDN & Custom Config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind.config.js"></script>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header class="sticky top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+            <a href="../index.html#home" class="flex items-center gap-3 text-headline-lg font-headline-lg text-primary dark:text-primary-fixed tracking-tight hover:opacity-90 transition-opacity">
+                <img src="../assets/images/logo.png" alt="Azeria Logo" class="w-10 h-10 object-contain" />
+                Azeria
+            </a>
+            <nav class="hidden md:flex gap-6 items-center">
+                <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="../index.html#home">Home</a>
+                <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 cursor-pointer active:scale-95 transition-transform hover:text-primary dark:hover:text-primary-fixed duration-200" href="../index.html#projects">Projects</a>
+                <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="../index.html#skills">Skills</a>
+                <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="../index.html#contact">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="../index.html#contact" class="bg-primary-container text-on-primary font-body-md text-body-md px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                    Resume
+                </a>
+            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-primary p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-gutter py-4 space-y-3">
+            <a class="block py-2 text-on-surface-variant hover:text-primary" href="../index.html#home">Home</a>
+            <a class="block py-2 text-primary font-bold" href="../index.html#projects">Projects</a>
+            <a class="block py-2 text-on-surface-variant hover:text-primary" href="../index.html#skills">Skills</a>
+            <a class="block py-2 text-on-surface-variant hover:text-primary" href="../index.html#contact">Contact</a>
+            <a href="../index.html#contact" class="block w-full text-center mt-2 bg-primary-container text-on-primary font-body-md py-2 rounded-lg hover:opacity-90 transition-opacity">
+                Resume
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="w-full pt-section-gap pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto min-h-[80vh]">
+            <a href="../index.html#projects" class="text-primary font-body-md inline-flex items-center gap-2 mb-8 hover:underline">
+                <span class="material-symbols-outlined">arrow_back</span> Kembali ke Daftar Proyek
+            </a>
+            
+            <div class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-depth border border-outline-variant/20">
+                <!-- Hero Image Showcase -->
+                <div class="h-[380px] md:h-[460px] overflow-hidden relative group">
+                    <img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" alt="FinTech Wallet Mobile Application Interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtLrL8IlpSpeez_TCuE-AyreeYlOjtupEY9371D6BOy6O2EWonJrOr9asCo_ovPc2EQLPq-lCdeXseRPh_xt4zsh-XlZEaE8sy8bGiogfbyaEyUFy7gvFkT5cV9tLwqtf8zuMqTC5vYfJVsmHafQoCJY0xn_5cAZOJmH5Qij-6xCxVArYxxjKYkXi3fz0ZYFAMZxzocHg1B8zrsQqVxbq1P5iAmE6ME3XwIBbtgs0ENMhVVDjgRIM2"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 md:left-12 text-white">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-xs font-semibold mb-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            FinTech & Core Banking
+                        </div>
+                        <h1 class="font-headline-xl text-3xl md:text-5xl font-bold tracking-tight">FinTech Wallet API</h1>
+                        <p class="text-sm md:text-base text-gray-200 mt-1 max-w-2xl">Secure Core Banking Engine & Low-Latency Digital Wallet API</p>
+                    </div>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">Python 3.11</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">Django REST Framework</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">PostgreSQL (ACID)</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">Redis Distributed Lock</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">Celery Task Queue</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">Payment Gateway Webhook</span>
+                    </div>
+                    
+                    <div class="prose max-w-none text-on-surface-variant text-body-md space-y-6">
+                        <div>
+                            <h2 class="font-bold text-2xl text-on-surface mb-3">Ringkasan Proyek</h2>
+                            <p class="leading-relaxed">
+                                <strong>FinTech Wallet API</strong> adalah backend engine finansial tangguh dengan arsitektur pembukuan terstandar (double-entry ledger) untuk mendukung ekosistem dompet digital modern. Sistem ini memproses otorisasi pembayaran berkecepatan tinggi di bawah 100 milidetik, manajemen saldo akun multi-valuta, validasi keamanan KYC (Know Your Customer), serta rekonsiliasi transfer otomatis dengan payment gateway eksternal.
+                            </p>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div>
+                            <h3 class="font-bold text-xl text-on-surface mb-4">Fitur-Fitur Utama (Key Features)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">account_balance</span>
+                                        <h4 class="font-bold text-on-surface">Double-Entry Ledger Accounting</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Sistem pembukuan berpasangan di mana setiap transaksi dicatat secara absolut dalam entri debet dan kredit, mencegah terjadinya selisih saldo akun secara matematis.</p>
+                                </div>
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">lock</span>
+                                        <h4 class="font-bold text-on-surface">Idempotent Transaction Guard</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Penerapan kunci terdistribusi (distributed locks) berbasis Redis dan token idempotensi untuk mencegah terjadinya double-spending atau pemotongan saldo ganda.</p>
+                                </div>
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">flash_on</span>
+                                        <h4 class="font-bold text-on-surface">Sub-100ms API Response</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Optimasi query database, indeks relasional komprehensif, dan arsitektur caching memory-first yang memastikan waktu respons API di bawah 100 milidetik saat peak traffic.</p>
+                                </div>
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">security</span>
+                                        <h4 class="font-bold text-on-surface">Audit Trail & Enkripsi AES-256</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Pencatatan riwayat audit transaksi yang tidak dapat dimodifikasi (immutable log) serta enkripsi data kredensial pembayaran menggunakan standar AES-256.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Architecture -->
+                        <div class="pt-4">
+                            <h3 class="font-bold text-xl text-on-surface mb-4">Teknologi & Arsitektur Sistem</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm border border-outline-variant/30 rounded-lg overflow-hidden">
+                                    <thead class="bg-surface-container-low text-on-surface font-semibold">
+                                        <tr>
+                                            <th class="p-3 border-b border-outline-variant/30">Komponen</th>
+                                            <th class="p-3 border-b border-outline-variant/30">Teknologi</th>
+                                            <th class="p-3 border-b border-outline-variant/30">Peran & Implementasi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-outline-variant/20">
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">Backend API Core</td>
+                                            <td class="p-3">Python 3.11 & Django REST Framework</td>
+                                            <td class="p-3">Validasi skema request data, autentikasi berbasis JWT, serta orkestrasi alur bisnis transaksi dompet.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">Database Transaksional</td>
+                                            <td class="p-3">PostgreSQL (Serializable Isolation)</td>
+                                            <td class="p-3">Menjamin integritas data saldo melalui transaksi ACID yang ketat tanpa resiko race condition.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">Distributed Locking & Cache</td>
+                                            <td class="p-3">Redis Clustered</td>
+                                            <td class="p-3">Pencegahan transaksi ganda (Redlock algorithm), token blacklist, dan session rate-limiting.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">Background Processing</td>
+                                            <td class="p-3">Celery & RabbitMQ Message Broker</td>
+                                            <td class="p-3">Pengiriman email notifikasi mutasi, webhook retry handler, dan kalkulasi bunga saldo secara terjadwal.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="mt-12 pt-8 border-t border-outline-variant/20 flex flex-wrap gap-4">
+                        <a href="#" class="bg-primary-container text-on-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-body-md inline-flex items-center gap-2">
+                            Spesifikasi API (Swagger) <span class="material-symbols-outlined text-sm">api</span>
+                        </a>
+                        <a href="../index.html#contact" class="bg-transparent border border-outline text-primary px-6 py-3 rounded-lg hover:bg-surface-container-low transition-colors font-body-md inline-flex items-center gap-2">
+                            Konsultasi Arsitektur FinTech <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-stack-lg bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/30">
+        <div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-stack-md">
+            <div class="text-body-md font-bold text-on-surface">
+                Azeria
+            </div>
+            <div class="font-caption text-caption text-primary dark:text-primary-fixed-dim">
+                © <span id="current-year"></span> Azeria. Built with precision.
+            </div>
+            <div class="flex gap-4">
+                <a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 font-caption text-caption" href="https://github.com/dennymaulanah" aria-label="GitHub Profile">GitHub</a>
+                <a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 font-caption text-caption" href="https://www.linkedin.com/in/dennymaulanah/" aria-label="LinkedIn Profile">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
