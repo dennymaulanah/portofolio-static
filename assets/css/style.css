@@ -1,0 +1,47 @@
+/* Custom Styles & Utilities for Azeria Portfolio */
+
+/* Glassmorphism Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+/* Ambient Depth Shadow & Hover Transitions */
+.ambient-depth {
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ambient-depth:hover {
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+    transform: translateY(-4px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #faf8ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c3c6d7;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #737686;
+}
+
+/* Mobile Menu Transitions */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+#mobile-menu.hidden {
+    display: none;
+}
