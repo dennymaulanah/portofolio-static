@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Azeria - SINTREN AYU V.2 (WebGIS Sistem Informasi Nelayan)</title>
+    <meta name="description" content="Technical project breakdown of SINTREN AYU V.2: Integrated WebGIS and Fishermen Information System for Indramayu Regency."/>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo.png" type="image/png"/>
+    
+    <!-- Tailwind CSS CDN & Custom Config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind.config.js"></script>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header class="sticky top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+            <a href="../" class="flex items-center gap-3 text-headline-lg font-headline-lg text-primary dark:text-primary-fixed tracking-tight hover:opacity-90 transition-opacity">
+                <img src="../assets/images/logo.png" alt="Azeria Logo" class="w-10 h-10 object-contain" />
+                Azeria
+            </a>
+            <nav class="hidden md:flex gap-6 items-center">
+                <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="../">Home</a>
+                <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 cursor-pointer active:scale-95 transition-transform hover:text-primary dark:hover:text-primary-fixed duration-200" href="../#projects">Projects</a>
+                <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="../#skills">Skills</a>
+                <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors cursor-pointer active:scale-95 duration-200" href="../#contact">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="../#contact" class="bg-primary-container text-on-primary font-body-md text-body-md px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                    Resume
+                </a>
+            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-primary p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-gutter py-4 space-y-3">
+            <a class="block py-2 text-on-surface-variant hover:text-primary" href="../">Home</a>
+            <a class="block py-2 text-primary font-bold" href="../#projects">Projects</a>
+            <a class="block py-2 text-on-surface-variant hover:text-primary" href="../#skills">Skills</a>
+            <a class="block py-2 text-on-surface-variant hover:text-primary" href="../#contact">Contact</a>
+            <a href="../#contact" class="block w-full text-center mt-2 bg-primary-container text-on-primary font-body-md py-2 rounded-lg hover:opacity-90 transition-opacity">
+                Resume
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="w-full pt-section-gap pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto min-h-[80vh]">
+            <a href="../#projects" class="text-primary font-body-md inline-flex items-center gap-2 mb-8 hover:underline">
+                <span class="material-symbols-outlined">arrow_back</span> Kembali ke Daftar Proyek
+            </a>
+            
+            <div class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-depth border border-outline-variant/20">
+                <!-- Hero Image Showcase -->
+                <div class="h-[380px] md:h-[460px] overflow-hidden relative group">
+                    <img class="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-700" alt="SINTREN AYU V.2 Desktop Workspace Mockup" src="../assets/images/sintren-desktop-mockup.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 md:left-12 text-white">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-xs font-semibold mb-2">
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                            Production GovTech • sintren.indramayukab.go.id
+                        </div>
+                        <h1 class="font-headline-xl text-3xl md:text-5xl font-bold tracking-tight">SINTREN AYU V.2</h1>
+                        <p class="text-sm md:text-base text-gray-200 mt-1 max-w-2xl">Sistem Informasi Nelayan Terpadu & Pemetaan Geospasial Wilayah Pesisir Kabupaten Indramayu</p>
+                    </div>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">Leaflet.js</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">WebGIS & GeoJSON</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">PHP / CodeIgniter 4</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">MySQL Database</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">BMKG Weather API</span>
+                        <span class="bg-surface-container-low text-primary font-label-mono text-xs px-3 py-1.5 rounded-md font-medium">DomPDF & PHPWord</span>
+                    </div>
+                    
+                    <div class="prose max-w-none text-on-surface-variant text-body-md space-y-6">
+                        <div>
+                            <h2 class="font-bold text-2xl text-on-surface mb-3">Ringkasan Proyek</h2>
+                            <p class="leading-relaxed">
+                                <strong>SINTREN AYU V.2 (Sistem Informasi Nelayan Terpadu Indramayu Ayu)</strong> adalah sistem informasi terpadu berbasis web dan spasial (WebGIS) yang dikembangkan untuk pemerintah Kabupaten Indramayu (Dinas Perikanan dan Kelautan). Platform ini mengintegrasikan pendataan profil kelompok nelayan pesisir, validasi identitas pelaku usaha KUSUKA, serta pemantauan cuaca maritim secara real-time guna mendukung keselamatan dan kesejahteraan nelayan di wilayah pesisir Indramayu.
+                            </p>
+                        </div>
+                        
+                        <!-- Visual Gallery Grid -->
+                        <div class="my-10">
+                            <h3 class="font-bold text-xl text-on-surface mb-4">Tangkapan Layar Sistem (System Preview)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/30">
+                                    <img class="w-full h-48 object-cover object-top" src="../assets/images/sintren-map.png" alt="Peta Sebaran WebGIS SINTREN"/>
+                                    <div class="p-4">
+                                        <h4 class="font-bold text-on-surface text-sm mb-1">Peta Sebaran WebGIS</h4>
+                                        <p class="text-xs text-on-surface-variant">Pemetaan titik kelompok KUB dan Pokmaswas di pesisir Indramayu.</p>
+                                    </div>
+                                </div>
+                                <div class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/30">
+                                    <img class="w-full h-48 object-cover object-top" src="../assets/images/sintren-home.png" alt="Portal Cuaca & Layanan SINTREN"/>
+                                    <div class="p-4">
+                                        <h4 class="font-bold text-on-surface text-sm mb-1">Beranda & Monitoring Cuaca</h4>
+                                        <p class="text-xs text-on-surface-variant">Suhu real-time, kelembapan, angin, dan prakiraan cuaca 5 hari.</p>
+                                    </div>
+                                </div>
+                                <div class="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/30">
+                                    <img class="w-full h-48 object-cover object-top" src="../assets/images/sintren-dashboard.png" alt="Dashboard Master Data Kelompok"/>
+                                    <div class="p-4">
+                                        <h4 class="font-bold text-on-surface text-sm mb-1">Dashboard Data KUSUKA</h4>
+                                        <p class="text-xs text-on-surface-variant">Pencatatan profil kelompok nelayan dan ekspor dokumen PDF/Word.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div>
+                            <h3 class="font-bold text-xl text-on-surface mb-4">Fitur-Fitur Utama (Key Features)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">map</span>
+                                        <h4 class="font-bold text-on-surface">Pemetaan Geospasial Interaktif</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Visualisasi titik sebaran KUB (Kelompok Usaha Bersama) dan Pokmaswas (Kelompok Masyarakat Pengawas) di sepanjang pesisir Indramayu dengan layer kontrol dan filter kecamatan.</p>
+                                </div>
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">badge</span>
+                                        <h4 class="font-bold text-on-surface">Integrasi Identitas KUSUKA</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Pencatatan dan verifikasi data kelompok nelayan yang terhubung dengan nomor KUSUKA resmi Kementerian Kelautan dan Perikanan (KKP).</p>
+                                </div>
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">thunderstorm</span>
+                                        <h4 class="font-bold text-on-surface">Prakiraan Cuaca Maritim Real-time</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Penyajian parameter cuaca perairan terkini (kecepatan angin, kelembapan, suhu) dan tabel prakiraan 5 hari ke depan untuk keselamatan melaut.</p>
+                                </div>
+                                <div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+                                    <div class="flex items-center gap-3 mb-2 text-primary">
+                                        <span class="material-symbols-outlined">print</span>
+                                        <h4 class="font-bold text-on-surface">Ekspor Dokumen Otomatis</h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Kemudahan cetak dan generate rekapitulasi data anggota dan kelompok nelayan secara instan ke format dokumen PDF dan Microsoft Word.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Architecture -->
+                        <div class="pt-4">
+                            <h3 class="font-bold text-xl text-on-surface mb-4">Teknologi & Arsitektur Sistem</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm border border-outline-variant/30 rounded-lg overflow-hidden">
+                                    <thead class="bg-surface-container-low text-on-surface font-semibold">
+                                        <tr>
+                                            <th class="p-3 border-b border-outline-variant/30">Komponen</th>
+                                            <th class="p-3 border-b border-outline-variant/30">Teknologi</th>
+                                            <th class="p-3 border-b border-outline-variant/30">Peran & Implementasi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-outline-variant/20">
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">WebGIS Engine</td>
+                                            <td class="p-3">Leaflet.js & Tile Layer Google Maps</td>
+                                            <td class="p-3">Rendering peta interaktif, custom marker sebaran (KUB & Pokmaswas), polygon batas wilayah dan tooltip popup.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">Backend & Framework</td>
+                                            <td class="p-3">PHP / CodeIgniter 4 (CI4)</td>
+                                            <td class="p-3">Manajemen controller MVC, routing, otentikasi operator dinas, dan REST API query spasial.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">Database</td>
+                                            <td class="p-3">MySQL / Spatially Indexed Database</td>
+                                            <td class="p-3">Penyimpanan master data nelayan, koordinat latitude/longitude, status verifikasi KUSUKA, dan histori audit.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-3 font-semibold text-primary">Layanan Integrasi</td>
+                                            <td class="p-3">Weather Data API, DomPDF, PHPWord</td>
+                                            <td class="p-3">Sinkronisasi cuaca otomatis per jam serta pembuatan laporan administratif siap cetak.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="mt-12 pt-8 border-t border-outline-variant/20 flex flex-wrap gap-4">
+                        <a href="https://sintren.indramayukab.go.id" target="_blank" rel="noopener noreferrer" class="bg-primary-container text-on-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-body-md inline-flex items-center gap-2">
+                            Akses Website Resmi <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                        <a href="../index.html#contact" class="bg-transparent border border-outline text-primary px-6 py-3 rounded-lg hover:bg-surface-container-low transition-colors font-body-md inline-flex items-center gap-2">
+                            Hubungi Saya untuk Proyek Serupa <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-stack-lg bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/30">
+        <div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-stack-md">
+            <div class="text-body-md font-bold text-on-surface">
+                Azeria
+            </div>
+            <div class="font-caption text-caption text-primary dark:text-primary-fixed-dim">
+                © <span id="current-year"></span> Azeria. Built with precision.
+            </div>
+            <div class="flex gap-4">
+                <a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 font-caption text-caption" href="https://github.com/dennymaulanah" aria-label="GitHub Profile">GitHub</a>
+                <a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 font-caption text-caption" href="https://www.linkedin.com/in/dennymaulanah/" aria-label="LinkedIn Profile">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

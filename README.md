@@ -23,8 +23,10 @@ portofolio-static/
 │       └── logo.png             # Logo website dan favicon
 ├── pages/
 │   ├── sintren-ayu.html         # Detail proyek SINTREN AYU V.2 (WebGIS Nelayan)
-│   ├── cloud-monitor.html       # Detail proyek Cloud Monitor (DevOps & Telemetry)
-│   ├── fintech-wallet.html      # Detail proyek FinTech Wallet API (Banking Engine)
+│   ├── sipeka.html              # Detail proyek SIPEKA Indramayu (Sistem Perikanan & Kelautan)
+│   ├── azeria-portfolio.html    # Detail proyek Azeria Developer Portfolio (azeria.web.id)
+│   ├── cloud-monitor.html       # Legacy alias SIPEKA Indramayu
+│   ├── fintech-wallet.html      # Legacy alias Azeria Developer Portfolio
 │   └── project-detail.html      # Fallback template detail proyek
 ├── CNAME                        # Konfigurasi custom domain (azeria.web.id)
 ├── index.html                   # Halaman utama portofolio
